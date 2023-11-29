@@ -12,13 +12,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Set up Docker
-      uses: docker/setup-docker@v2
-      with:
-        dockerfile: Dockerfile
-        context: .
-
+ 
     - name: Build and push Docker image
       env:
         DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
