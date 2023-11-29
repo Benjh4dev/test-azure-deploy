@@ -20,4 +20,4 @@ jobs:
       run: |
         echo $DOCKERHUB_TOKEN | docker login --username $DOCKERHUB_USERNAME --password-stdin
         docker build -t $DOCKERHUB_USERNAME/express-test:latest .
-        docker push $DOCKER_HUBUSERNAME/express-test:latest
+        docker push $DOCKERHUB_USERNAME/express-test:latest
