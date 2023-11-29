@@ -18,6 +18,6 @@ jobs:
         DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
       run: |
-        echo $DOCKER_HUB_TOKEN | docker login -u $DOCKER_HUB_USERNAME --password-stdin
-        docker build -t $DOCKER_HUB_USERNAME/express-test:latest .
-        docker push $DOCKER_HUB_USERNAME/express-test:latest
+        echo $DOCKERHUB_TOKEN | docker login -u $DOCKERHUB_USERNAME --password-stdin
+        docker build -t $DOCKERHUB_USERNAME/express-test:latest .
+        docker push $DOCKER_HUBUSERNAME/express-test:latest
