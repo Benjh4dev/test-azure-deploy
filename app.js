@@ -7,11 +7,23 @@ const app = express()
 app.use(cors())
 
 const port = process.env.PORT || 3000;
-
+const work = process.env.WORK || "NOT WORK"
 app.get('/', (req, res) => {
+    if(work == "NOT WORK"){
+        console.log
+        res.send("NOT WORK")
+    }
     res.send('Hello World!')
 })
 
+
+
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
+    if(work == "NOT WORK"){
+        console.log("NOT WORK")
+        console.log(`Server is running on port ${port}`)
+    } else {
+        console.log("WORKING")
+        console.log(`Server is running on port ${port}`)
+    }
 })

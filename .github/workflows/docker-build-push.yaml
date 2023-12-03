@@ -19,5 +19,6 @@ jobs:
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
       run: |
         echo $DOCKERHUB_TOKEN | docker login --username $DOCKERHUB_USERNAME --password-stdin
-        docker build -t $DOCKERHUB_USERNAME/express-test:latest .
-        docker push $DOCKERHUB_USERNAME/express-test:latest
+        docker build -t test-express:latest .
+        docker tag test-express:latest $DOCKERHUB_USERNAME/test-express:latest
+        docker push $DOCKERHUB_USERNAME/test-express:latest
