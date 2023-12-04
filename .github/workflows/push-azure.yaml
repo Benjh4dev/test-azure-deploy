@@ -38,8 +38,9 @@ jobs:
 
     - name: Pull and tag Docker image from Docker Hub
       run: |
-        docker pull benjh4/express-test:latest
-        docker tag benjh4/express-test:latest audioflow.azurecr.io/express-test:latest
+        docker pull benjh4/test-express:latest
+        docker tag benjh4/test-express:latest audioflow.azurecr.io/express-test:latest
+
 
     - name: Push Docker image to Azure Container Registry
       run: docker push audioflow.azurecr.io/express-test:latest
