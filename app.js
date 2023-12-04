@@ -24,6 +24,5 @@ app.listen(port, () => {
     } else {
         console.log("WORKING")
         console.log(`Server is running on port ${port}`)
-         
     }
 })
