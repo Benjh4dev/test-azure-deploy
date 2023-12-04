@@ -9,11 +9,7 @@ app.use(cors())
 const port = process.env.PORT || 3000;
 const work = process.env.WORK || "NOT WORK"
 app.get('/', (req, res) => {
-    if(work == "NOT WORK"){
-        console.log
-        res.send("NOT WORK")
-    }
-    res.send('Hello World!')
+    res.send('ISD WORKING V1.0.0')
 })
 
 app.get('/api', (req, res) => {
