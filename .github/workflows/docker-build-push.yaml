@@ -21,4 +21,7 @@ jobs:
         echo $DOCKERHUB_TOKEN | docker login --username $DOCKERHUB_USERNAME --password-stdin
         docker build -t test-express:latest .
         docker tag test-express:latest $DOCKERHUB_USERNAME/test-express:latest
-        docker push $DOCKERHUB_USERNAME/test-express:latest
+        docker tag test-express:latest test-express:latest
+        docker rmi $DOCKERHUB_USERNAME/test-express:latest  # Remove the image with the username prefix
+        docker push test-express:latest
+
